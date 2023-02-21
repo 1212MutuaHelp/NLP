@@ -8,6 +8,10 @@ import pdfplumber
 
 
 def read_pdf(path):
+    """
+    :param path:    pdf文件路径
+    :return: none
+    """
     with pdfplumber.open(path) as pdf:
         for i, page in enumerate(pdf.pages):
             # 获取当前页面的全部文本信息，包括表格中的文字
@@ -17,7 +21,7 @@ def read_pdf(path):
 
         pdf.close()
 
-
+def 
 if __name__ == '__main__':
     print("Hello World")
     path_pdf = r"中医预测疾病100法.pdf"
